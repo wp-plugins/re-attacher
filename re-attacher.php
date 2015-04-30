@@ -1,10 +1,10 @@
 <?php
 /*
-Plugin Name: Re-attacher
+Plugin Name: Re-attacher by BestWebSoft
 Plugin URI: http://bestwebsoft.com/products/
 Description: This plugin allows to attach, unattach or reattach media item in different post.
 Author: BestWebSoft
-Version: 1.0.0
+Version: 1.0.1
 Author URI: http://bestwebsoft.com/
 License: GPLv3 or later
 */
@@ -27,53 +27,7 @@ License: GPLv3 or later
 
 if ( ! function_exists( 'rttchr_admin_menu' ) ) {
 	function rttchr_admin_menu() {
-		global $bstwbsftwppdtplgns_options, $bstwbsftwppdtplgns_added_menu;
-		$bws_menu_info = get_plugin_data( plugin_dir_path( __FILE__ ) . "bws_menu/bws_menu.php" );
-		$bws_menu_version = $bws_menu_info["Version"];
-		$base = plugin_basename(__FILE__);
-		if ( ! isset( $bstwbsftwppdtplgns_options ) ) {
-			if ( is_multisite() ) {
-				if ( ! get_site_option( 'bstwbsftwppdtplgns_options' ) )
-					add_site_option( 'bstwbsftwppdtplgns_options', array(), '', 'yes' );
-				$bstwbsftwppdtplgns_options = get_site_option( 'bstwbsftwppdtplgns_options' );
-			} else {
-				if ( ! get_option( 'bstwbsftwppdtplgns_options' ) )
-					add_option( 'bstwbsftwppdtplgns_options', array(), '', 'yes' );
-				$bstwbsftwppdtplgns_options = get_option( 'bstwbsftwppdtplgns_options' );
-			}
-		}
-		if ( isset( $bstwbsftwppdtplgns_options['bws_menu_version'] ) ) {
-			$bstwbsftwppdtplgns_options['bws_menu']['version'][ $base ] = $bws_menu_version;
-			unset( $bstwbsftwppdtplgns_options['bws_menu_version'] );
-			if ( is_multisite() )
-				update_site_option( 'bstwbsftwppdtplgns_options', $bstwbsftwppdtplgns_options, '', 'yes' );
-			else
-				update_option( 'bstwbsftwppdtplgns_options', $bstwbsftwppdtplgns_options, '', 'yes' );
-			require_once( dirname( __FILE__ ) . '/bws_menu/bws_menu.php' );
-		} else if ( ! isset( $bstwbsftwppdtplgns_options['bws_menu']['version'][ $base ] ) || $bstwbsftwppdtplgns_options['bws_menu']['version'][ $base ] < $bws_menu_version ) {
-			$bstwbsftwppdtplgns_options['bws_menu']['version'][ $base ] = $bws_menu_version;
-			if ( is_multisite() )
-				update_site_option( 'bstwbsftwppdtplgns_options', $bstwbsftwppdtplgns_options, '', 'yes' );
-			else
-				update_option( 'bstwbsftwppdtplgns_options', $bstwbsftwppdtplgns_options, '', 'yes' );
-			require_once( dirname( __FILE__ ) . '/bws_menu/bws_menu.php' );
-		} else if ( ! isset( $bstwbsftwppdtplgns_added_menu ) ) {
-			$plugin_with_newer_menu = $base;
-			foreach ( $bstwbsftwppdtplgns_options['bws_menu']['version'] as $key => $value ) {
-				if ( $bws_menu_version < $value && is_plugin_active( $base ) ) {
-					$plugin_with_newer_menu = $key;
-				}
-			}
-			$plugin_with_newer_menu = explode( '/', $plugin_with_newer_menu );
-			$wp_content_dir = defined( 'WP_CONTENT_DIR' ) ? basename( WP_CONTENT_DIR ) : 'wp-content';
-			if ( file_exists( ABSPATH . $wp_content_dir . '/plugins/' . $plugin_with_newer_menu[0] . '/bws_menu/bws_menu.php' ) )
-				require_once( ABSPATH . $wp_content_dir . '/plugins/' . $plugin_with_newer_menu[0] . '/bws_menu/bws_menu.php' );
-			else
-				require_once( dirname( __FILE__ ) . '/bws_menu/bws_menu.php' );	
-			$bstwbsftwppdtplgns_added_menu = true;			
-		}
-
-		add_menu_page( 'BWS Plugins', 'BWS Plugins', 'manage_options', 'bws_plugins', 'bws_add_menu_render', plugins_url( "images/px.png", __FILE__ ), 1001 ); 
+		bws_add_general_menu( plugin_basename( __FILE__ ) );
 		add_submenu_page( 'bws_plugins', 'Re-attacher ' . __( 'Settings', 're_attacher' ), 'Re-attacher', 'manage_options', "re-attacher.php", 'rttchr_settings_page' );	
 	}
 }
@@ -82,10 +36,20 @@ if ( ! function_exists( 'rttchr_admin_menu' ) ) {
 */
 if ( ! function_exists( 'rttchr_init' ) ) {
 	function rttchr_init() {
+		global $rttchr_plugin_info;
 		/* Internationalization, first(!) */
 		load_plugin_textdomain( 're_attacher', false, dirname( plugin_basename( __FILE__ ) ) . '/languages/' );
+
+		require_once( dirname( __FILE__ ) . '/bws_menu/bws_functions.php' );
+
+		if ( empty( $rttchr_plugin_info ) ) {
+			if ( ! function_exists( 'get_plugin_data' ) )
+				require_once( ABSPATH . 'wp-admin/includes/plugin.php' );
+			$rttchr_plugin_info = get_plugin_data( __FILE__ );
+		}
+
 		/* Function check if plugin is compatible with current WP version */
-		rttchr_version_check();
+		bws_wp_version_check( plugin_basename( __FILE__ ), $rttchr_plugin_info, "3.5" );
 	}
 }
 /**
@@ -95,9 +59,6 @@ if ( ! function_exists( 'rttchr_admin_init' ) ) {
 	function rttchr_admin_init() {
 		global $bws_plugin_info, $rttchr_plugin_info;
 		/* Add variable for bws_menu */
-		if ( ! $rttchr_plugin_info )
-			$rttchr_plugin_info = get_plugin_data( __FILE__ );
-
 		if ( ! isset( $bws_plugin_info ) || empty( $bws_plugin_info ) ) {
 			$bws_plugin_info = array( 'id' => '182', 'version' => $rttchr_plugin_info['Version'] );
 		}		
@@ -119,31 +80,11 @@ if ( ! function_exists( 'rttchr_admin_init' ) ) {
 	}
 }
 /* 
-*	Сhecking version WP
-*/
-if ( ! function_exists( 'rttchr_version_check' ) ) {
-	function rttchr_version_check() { 
-		global $wp_version, $rttchr_plugin_info;
-		$require_wp		=	"3.5"; /* Wordpress at least requires version */
-		$plugin			=	plugin_basename( __FILE__ );
-	 	if ( version_compare( $wp_version, $require_wp, "<" ) ) {
-	 		include_once( ABSPATH . 'wp-admin/includes/plugin.php' );
-			if ( is_plugin_active( $plugin ) ) {
-				deactivate_plugins( $plugin );
-				if ( ! $rttchr_plugin_info )
-					$rttchr_plugin_info = get_plugin_data( __FILE__ );
-				$admin_url = ( function_exists( 'get_admin_url' ) ) ? get_admin_url( null, 'plugins.php' ) : esc_url( '/wp-admin/plugins.php' );
-				wp_die( '<strong>' . $rttchr_plugin_info['Name'] . ' </strong> ' . __( 'requires', 're_attacher' ) . ' <strong>WordPress ' . $require_wp . '</strong> ' . __( 'or higher, that is why it has been deactivated! Please upgrade WordPress and try again.', 're_attacher' ) . '<br /><br />' . __( 'Back to the WordPress', 're_attacher' ) . ' <a href="' . $admin_url . '">' . __( 'Plugins page', 're_attacher' ) . '</a>.' );
-			}
-		}
-	}	
-}
-/* 
 *	Сhecking Gallery Plugin version
 */
 if ( ! function_exists( 'rttchr_gallery_check' ) ) {
 	function rttchr_gallery_check() {
-		global $rttchr_gallery_old_version ;
+		global $rttchr_gallery_old_version;
 		/* old version */
 		if ( is_plugin_active( 'gallery-plugin/gallery-plugin.php' ) || is_plugin_active( 'gallery-plugin-pro/gallery-plugin-pro.php' ) ) {
 			$all_plugins = get_plugins();
@@ -160,9 +101,6 @@ if ( ! function_exists( 'rttchr_gallery_check' ) ) {
 if ( ! function_exists( 'rttchr_settings' ) ) {
 	function rttchr_settings() {
 		global $rttchr_options, $rttchr_plugin_info;
-		/* Add variable for bws_menu */
-		if ( ! $rttchr_plugin_info )
-			$rttchr_plugin_info = get_plugin_data( __FILE__ );
 
 		$rttchr_option_defaults = array(
 			'plugin_option_version' 	=> $rttchr_plugin_info['Version'],
@@ -244,16 +182,7 @@ if ( ! function_exists( 'rttchr_settings_page' ) ) {
 				</p>
 				<?php wp_nonce_field( plugin_basename( __FILE__ ), 'rttchr_nonce_name' ); ?>
 			</form>
-			<div class="bws-plugin-reviews">
-				<div class="bws-plugin-reviews-rate">
-					<?php _e( 'If you enjoy our plugin, please give it 5 stars on WordPress', 're_attacher' ); ?>: 
-					<a href="http://wordpress.org/support/view/plugin-reviews/re-attacher/" target="_blank" title="Re-attacher reviews"><?php _e( 'Rate the plugin', 're_attacher' ); ?></a>
-				</div>
-				<div class="bws-plugin-reviews-support">
-					<?php _e( 'If there is something wrong about it, please contact us', 're_attacher' ); ?>: 
-					<a href="http://support.bestwebsoft.com">http://support.bestwebsoft.com</a>
-				</div>
-			</div>
+			<?php bws_plugin_reviews_block( $rttchr_plugin_info['Name'], 're-attacher' ); ?>
 		</div>		
 	<?php }
 }
@@ -905,7 +834,7 @@ register_activation_hook( __FILE__, 'rttchr_settings' );
 /*	Add our menu end 'hook_page' */
 add_action( 'admin_menu', 'rttchr_admin_menu' );
 /*	Check if plugin is compatible with current WP version && Add translate && chek or add options */
-add_action( 'admin_init', 'rttchr_init' );
+add_action( 'init', 'rttchr_init' );
 add_action( 'admin_init', 'rttchr_admin_init' );
 /*	Implements a bulk action for unattaching items in bulk. */
  add_action( 'load-upload.php', 'rttchr_custom_bulk_action' ); 

@@ -1,10 +1,10 @@
-=== Re-attacher ===
+=== Re-attacher by BestWebSoft ===
 Contributors: bestwebsoft 
 Donate link: https://www.2checkout.com/checkout/purchase?sid=1430388&quantity=1&product_id=94
 Tags: plugin, wordpress, unattach, reattach, attach, re-attach, unattachment, attached, bind, image, re-attacher, re-attacher plugin, attach image, attachment, reatach, reattacj, re-attech, attach multiple files, attach to gallery, attach to portfolio
 Requires at least: 3.5 
-Tested up to: 4.1 
-Stable tag: 1.0.0
+Tested up to: 4.2.1 
+Stable tag: 1.0.1
 License: GPLv3 or later
 License URI: http://www.gnu.org/licenses/gpl-3.0.html
 
@@ -12,7 +12,9 @@ This plugin allows attaching, unattaching or reattaching media data to different
 
 == Description ==
 
-With this plugin, you can reattach previously uploaded images to other posts, as well as detach files from the post completely. Re-attacher allows you to manage both single files and groups of files. This plugin makes using our Gallery and Portfolio plugins a lot more convenient, as you won't have to upload new images each time you may need them on your gallery or portfolio pages. Instead, you can use the uploaded files, which not only saves your time, but also helps you spare some space for your website. 
+With this plugin, you can reattach previously uploaded images to other posts, as well as detach files from the post completely. Re-attacher allows you to manage both single files and groups of files. This plugin makes using our Gallery and Portfolio plugins a lot more convenient, as you won't have to upload new images each time you may need them on your gallery or portfolio pages. Instead, you can use the uploaded files, which not only saves your time, but also helps you spare some space for your website.
+
+http://www.youtube.com/watch?v=-EoT_zQJqHM
 
 <a href="http://wordpress.org/plugins/re-attacher/faq/" target="_blank">FAQ</a>
 <a href="http://support.bestwebsoft.com" target="_blank">Support</a>
@@ -56,6 +58,8 @@ We can fix some things for free for the users who provide a translation of our p
 2. Activate the plugin using the 'Plugins' menu in your WordPress admin panel.
 3. You can adjust the necessary settings using your WordPress admin panel in "BWS Plugins" > "Re-attacher".
 
+<a href="https://docs.google.com/document/d/13moIQgJda_Fvj7fVhtQpF8whiOsBoQfaYlw4Ahn92RU/edit" target="_blank">View a Step-by-step Instruction on Re-attacher Installation</a>.
+
 == Frequently Asked Questions ==  
 
 = I installed the plugin, but the attachment button did not appear in the gallery. Why? =
@@ -93,12 +97,18 @@ Please make sure that the problem hasn't been discussed on our forum yet (<a hre
 3. Re-attacher plugin on Media library page.
 4. Re-attacher Settings page.
 
-== Changelog == 
+== Changelog ==
+
+= V1.0.1 - 30.04.2015 =
+* Update : We updated all functionality for wordpress 4.2.1.
 
 = V1.0.0  - 22.01.2015 = 
 * Action: plugin release
 
 == Upgrade Notice ==
+
+= V1.0.1 =
+We updated all functionality for wordpress 4.2.1.
 
 = V1.0.0 =
 Plugin release

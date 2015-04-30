@@ -2,8 +2,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Re-attacher\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2015-02-09 14:31+0300\n"
-"PO-Revision-Date: 2015-02-09 14:31+0300\n"
+"POT-Creation-Date: 2015-04-30 10:03+0300\n"
+"PO-Revision-Date: 2015-04-30 10:03+0300\n"
 "Last-Translator: bestwebsoft.com <plugins@bestwebsoft.com>\n"
 "Language-Team: BestWebSoft <plugin@bestwebsoft.com>\n"
 "Language: ru_UA\n"
@@ -17,210 +17,209 @@ msgstr ""
 "X-Generator: Poedit 1.6.10\n"
 "X-Poedit-SearchPath-0: ..\n"
 
-#: ../re-attacher.php:77
-#: ../re-attacher.php:217
-#: ../re-attacher.php:219
-#: ../re-attacher.php:857
-#: ../re-attacher.php:872
+#: ../re-attacher.php:31
+#: ../re-attacher.php:155
+#: ../re-attacher.php:157
+#: ../re-attacher.php:787
+#: ../re-attacher.php:803
 msgid "Settings"
 msgstr "Настройки"
 
-#: ../re-attacher.php:136
-msgid "requires"
-msgstr "требует"
-
-#: ../re-attacher.php:136
-msgid "or higher, that is why it has been deactivated! Please upgrade WordPress and try again."
-msgstr "или выше, поэтому он был отключен! Пожалуйста, обновите WordPress и попробуйте еще раз."
-
-#: ../re-attacher.php:136
-msgid "Back to the WordPress"
-msgstr "Вернуться к WordPress"
-
-#: ../re-attacher.php:136
-msgid "Plugins page"
-msgstr "Страницe плагинов"
-
-#: ../re-attacher.php:152
+#: ../re-attacher.php:93
 msgid "Please update Gallery plugin to make sure it works correctly with Re-attacher plugin."
 msgstr "Пожалуйста, обновите плагин Gallery для корректной работы с плагином Re-attacher."
 
-#: ../re-attacher.php:212
+#: ../re-attacher.php:150
 msgid "Settings saved"
 msgstr "Настройки сохранены"
 
-#: ../re-attacher.php:220
-#: ../re-attacher.php:858
+#: ../re-attacher.php:158
+#: ../re-attacher.php:788
 msgid "FAQ"
 msgstr "FAQ"
 
-#: ../re-attacher.php:227
-#: ../re-attacher.php:611
-#: ../re-attacher.php:690
+#: ../re-attacher.php:165
+#: ../re-attacher.php:540
+#: ../re-attacher.php:619
 msgid "Notice"
 msgstr "Внимание"
 
-#: ../re-attacher.php:227
+#: ../re-attacher.php:165
 msgid "The plugin's settings have been changed. In order to save them please don't forget to click the 'Save Changes' button"
 msgstr "Настройки плагина были изменены. Чтобы сохранить их, пожалуйста, не забудьте нажать кнопку \"Сохранить изменения\""
 
-#: ../re-attacher.php:234
+#: ../re-attacher.php:172
 msgid "Show media files author their files only"
 msgstr "Показывать Авторам только их медиа файлы"
 
-#: ../re-attacher.php:243
+#: ../re-attacher.php:181
 msgid "Save Changes"
 msgstr "Сохранить изменения"
 
 #: ../re-attacher.php:249
-msgid "If you enjoy our plugin, please give it 5 stars on WordPress"
-msgstr " Если вам понравился плагин, мы будем благодарны, если вы поставите нам 5 звезд на WordPress"
-
-#: ../re-attacher.php:250
-msgid "Rate the plugin"
-msgstr "Оценить плагин"
-
-#: ../re-attacher.php:253
-msgid "If there is something wrong about it, please contact us"
-msgstr "Если у вас есть какие-то вопросы, обращайтесь"
-
-#: ../re-attacher.php:320
 msgid "You are not allowed to unattach files from this post."
 msgstr "Вы не можете откреплять файлы от этой записи."
 
-#: ../re-attacher.php:326
+#: ../re-attacher.php:255
 msgid "Error unattaching files from the post."
 msgstr "Ошибка открепления от записи."
 
-#: ../re-attacher.php:351
+#: ../re-attacher.php:280
 msgid "You are not allowed to edit this post."
 msgstr "Вы не можете редактировать эту запись."
 
-#: ../re-attacher.php:390
+#: ../re-attacher.php:319
 msgid "Select the item that needs to be attached"
 msgstr "Выберите объект который хотите прикрепить"
 
-#: ../re-attacher.php:391
+#: ../re-attacher.php:320
 msgid "Attach item"
 msgstr "Прикрепить объект"
 
-#: ../re-attacher.php:414
+#: ../re-attacher.php:343
 msgid "NOTICE"
 msgstr "ВНИМАНИЕ:"
 
-#: ../re-attacher.php:419
+#: ../re-attacher.php:348
 msgid "If you want Re-attacher plugin to work correctly, please enable JavaScript in your browser!"
 msgstr "Если вы хотите чтобы плагин Re-attacher работал, необходимо включить в браузере JavaScript !"
 
-#: ../re-attacher.php:436
-#: ../re-attacher.php:473
-#: ../re-attacher.php:641
-#: ../re-attacher.php:768
-#: ../re-attacher.php:789
-#: ../re-attacher.php:818
+#: ../re-attacher.php:365
+#: ../re-attacher.php:402
+#: ../re-attacher.php:570
+#: ../re-attacher.php:697
+#: ../re-attacher.php:718
+#: ../re-attacher.php:747
 msgid "Unattach"
 msgstr "Открепить"
 
-#: ../re-attacher.php:437
-#: ../re-attacher.php:471
-#: ../re-attacher.php:816
+#: ../re-attacher.php:366
+#: ../re-attacher.php:400
+#: ../re-attacher.php:745
 msgid "Reattach"
 msgstr "Прикрепить к ..."
 
-#: ../re-attacher.php:471
-#: ../re-attacher.php:816
+#: ../re-attacher.php:400
+#: ../re-attacher.php:745
 msgid "Reattach this media item"
 msgstr "Перекрепить этот медиа объект"
 
-#: ../re-attacher.php:473
-#: ../re-attacher.php:818
+#: ../re-attacher.php:402
+#: ../re-attacher.php:747
 msgid "Unattach this media item"
 msgstr "Открепить этот медиа файл"
 
-#: ../re-attacher.php:476
-#: ../re-attacher.php:820
+#: ../re-attacher.php:405
+#: ../re-attacher.php:749
 msgid "Unattached"
 msgstr "Не прикреплено"
 
-#: ../re-attacher.php:478
-#: ../re-attacher.php:821
+#: ../re-attacher.php:407
+#: ../re-attacher.php:750
 msgid "Attach this media item"
 msgstr "Прикрепить этот медиа файл"
 
-#: ../re-attacher.php:478
-#: ../re-attacher.php:821
+#: ../re-attacher.php:407
+#: ../re-attacher.php:750
 msgid "Attach"
 msgstr "Прикрепить"
 
-#: ../re-attacher.php:489
+#: ../re-attacher.php:418
 msgid "Attachment details"
 msgstr "Особенности прикрепленного файла"
 
-#: ../re-attacher.php:490
+#: ../re-attacher.php:419
 msgid "Already attached"
 msgstr "Уже прикреплен"
 
-#: ../re-attacher.php:501
+#: ../re-attacher.php:430
 msgid "Attach media item to the portfolio"
 msgstr "Прикрепить медиа файл к портфолио"
 
-#: ../re-attacher.php:611
-#: ../re-attacher.php:690
+#: ../re-attacher.php:540
+#: ../re-attacher.php:619
 msgid "this item attached to"
 msgstr "этот файл уже прикреплен к"
 
-#: ../re-attacher.php:611
-#: ../re-attacher.php:690
+#: ../re-attacher.php:540
+#: ../re-attacher.php:619
 msgid "If you attach it to the current "
 msgstr "Если вы прикрепите его к текущей(му)"
 
-#: ../re-attacher.php:611
-#: ../re-attacher.php:690
+#: ../re-attacher.php:540
+#: ../re-attacher.php:619
 msgid "it will disappear from the"
 msgstr "то он станет недоступен в "
 
-#: ../re-attacher.php:623
+#: ../re-attacher.php:552
 msgid "Don`t attach"
 msgstr "Не прикреплять"
 
-#: ../re-attacher.php:631
-#: ../re-attacher.php:695
+#: ../re-attacher.php:560
+#: ../re-attacher.php:624
 msgid "Warning"
 msgstr "Внимание"
 
-#: ../re-attacher.php:631
-#: ../re-attacher.php:695
+#: ../re-attacher.php:560
+#: ../re-attacher.php:624
 msgid "You are not allowed to attach this image"
 msgstr "У вас недостаточно прав чтоб прикреплять это изображение"
 
-#: ../re-attacher.php:771
+#: ../re-attacher.php:700
 msgid "Nothing attached"
 msgstr "Ничего не прикреплено"
 
-#: ../re-attacher.php:780
+#: ../re-attacher.php:709
 msgid "Choose a media file that will be attached"
 msgstr "Выберите медиа файлы для прикрепления"
 
-#: ../re-attacher.php:780
+#: ../re-attacher.php:709
 msgid "Attach media item to this gallery"
 msgstr "Прикрепить медиа файл к галерее"
 
-#: ../re-attacher.php:806
-#: ../re-attacher.php:834
+#: ../re-attacher.php:735
+#: ../re-attacher.php:763
 msgid "Attached to"
 msgstr "Прикреплен к"
 
-#: ../re-attacher.php:815
+#: ../re-attacher.php:744
 msgid "If you want change the attachment, please click on"
 msgstr "Если вы хотите прикрепить этот файл к другой записи или открепить его совсем, нажмите на:"
 
-#: ../re-attacher.php:817
+#: ../re-attacher.php:746
 msgid "or"
 msgstr "или"
 
-#: ../re-attacher.php:859
+#: ../re-attacher.php:789
 msgid "Support"
 msgstr "Служба поддержки"
+
+#~ msgid "requires"
+#~ msgstr "требует"
+
+#~ msgid ""
+#~ "or higher, that is why it has been deactivated! Please upgrade WordPress "
+#~ "and try again."
+#~ msgstr ""
+#~ "или выше, поэтому он был отключен! Пожалуйста, обновите WordPress и "
+#~ "попробуйте еще раз."
+
+#~ msgid "Back to the WordPress"
+#~ msgstr "Вернуться к WordPress"
+
+#~ msgid "Plugins page"
+#~ msgstr "Страницe плагинов"
+
+#~ msgid "If you enjoy our plugin, please give it 5 stars on WordPress"
+#~ msgstr ""
+#~ " Если вам понравился плагин, мы будем благодарны, если вы поставите нам 5 "
+#~ "звезд на WordPress"
+
+#~ msgid "Rate the plugin"
+#~ msgstr "Оценить плагин"
+
+#~ msgid "If there is something wrong about it, please contact us"
+#~ msgstr "Если у вас есть какие-то вопросы, обращайтесь"
 
 #~ msgid "'Don`t attach'"
 #~ msgstr "'Не прикреплять'"
