@@ -1,10 +1,10 @@
 === Re-attacher by BestWebSoft ===
 Contributors: bestwebsoft 
-Donate link: https://www.2checkout.com/checkout/purchase?sid=1430388&quantity=1&product_id=94
+Donate link: http://bestwebsoft.com/donate/
 Tags: plugin, wordpress, unattach, reattach, attach, re-attach, unattachment, attached, bind, image, re-attacher, re-attacher plugin, attach image, attachment, reatach, reattacj, re-attech, attach multiple files, attach to gallery, attach to portfolio
 Requires at least: 3.5 
-Tested up to: 4.2.1 
-Stable tag: 1.0.1
+Tested up to: 4.2.2
+Stable tag: 1.0.2
 License: GPLv3 or later
 License URI: http://www.gnu.org/licenses/gpl-3.0.html
 
@@ -16,7 +16,10 @@ With this plugin, you can reattach previously uploaded images to other posts, as
 
 http://www.youtube.com/watch?v=-EoT_zQJqHM
 
+<a href="http://www.youtube.com/watch?v=kjMK6GZ69YY" target="_blank">Video instruction on Installation</a>
+
 <a href="http://wordpress.org/plugins/re-attacher/faq/" target="_blank">FAQ</a>
+
 <a href="http://support.bestwebsoft.com" target="_blank">Support</a>
 
 = Features = 
@@ -30,8 +33,8 @@ http://www.youtube.com/watch?v=-EoT_zQJqHM
 
 The author of the Re-attacher also recommends the following plugins:
 
-* <a href="http://wordpress.org/plugins/portfolio/">Portfolio</a> - With the Portfolio plugin you can create a unique page for displaying portfolio items consisting of screenshots and additional information such as description, short description, URL, date of completion, etc.
-Moreover you can add not just one, but many screenshots to one portfolio item for better visual guidance. 
+* <a href="http://wordpress.org/plugins/portfolio/">Portfolio</a> - With the Portfolio plugin you can create a unique page for displaying portfolio items consisting of screenshots and additional information such as description, short description, URL, date of completion, etc. Moreover you can add not just one, but many screenshots to one portfolio item for better visual guidance. 
+There is also a premium version of the plugin <a href="http://bestwebsoft.com/products/portfolio/">Portfolio Pro</a> with more useful features available.
 * <a href="http://wordpress.org/plugins/gallery-plugin/">Gallery</a> - This plugin makes it possible to implement as many galleries as you want on your website. You can add multiple pictures and a description for each gallery, as well as show them all at one page, view each one separately. Moreover, you can upload HQ images. Regular updates and simplicity of usage along with efficient functionality make it a perfect choice for your site to have an appealing look. 
 There is also a premium version of the plugin <a href="http://bestwebsoft.com/products/gallery/">Gallery Pro</a> with more useful features available.
 * <a href="http://wordpress.org/plugins/updater/">Updater</a> - This plugin updates WordPress core and the plugins to the recent versions. You can also use the auto mode or manual mode for updating and set email notifications.
@@ -60,6 +63,8 @@ We can fix some things for free for the users who provide a translation of our p
 
 <a href="https://docs.google.com/document/d/13moIQgJda_Fvj7fVhtQpF8whiOsBoQfaYlw4Ahn92RU/edit" target="_blank">View a Step-by-step Instruction on Re-attacher Installation</a>.
 
+http://www.youtube.com/watch?v=kjMK6GZ69YY
+
 == Frequently Asked Questions ==  
 
 = I installed the plugin, but the attachment button did not appear in the gallery. Why? =
@@ -80,11 +85,12 @@ Yes, you can. To do so, please use "Bulk Actions" drop-down list and select an a
 
 == Can I add an attachment button and metabox for my post types?  ==
 
-Unfortunately, this functionality is not available, but if you want you can request a paid customization and provide all the details in a private ticket on our support forum http://support.bestwebsoft.com/. This way, we could develop the functionality that would match all of your requirements. 
+Unfortunately, this functionality is not available, but if you want you can request a paid customization and provide all the details in a private ticket on our support forum <a href="http://support.bestwebsoft.com" target="_blank">http://support.bestwebsoft.com</a>. This way, we could develop the functionality that would match all of your requirements. 
  
 == I have some problems with the plugin's work. What Information should I provide to receive proper support? ==
 
 Please make sure that the problem hasn't been discussed on our forum yet (<a href="http://support.bestwebsoft.com" target="_blank">http://support.bestwebsoft.com</a>). If not, please provide the following data along with your problem's description:
+
 1. the link to the page, on which the problem occurs
 2. the plugin’s name and version. If you are using a pro version - your order number.
 3. the version of your WordPress installation
@@ -99,6 +105,10 @@ Please make sure that the problem hasn't been discussed on our forum yet (<a hre
 
 == Changelog ==
 
+= V1.0.2 - 04.06.2015 =
+* Update : We updated all functionality for wordpress 4.2.2.
+* Update : BWS plugins section was updated.
+
 = V1.0.1 - 30.04.2015 =
 * Update : We updated all functionality for wordpress 4.2.1.
 
@@ -106,6 +116,9 @@ Please make sure that the problem hasn't been discussed on our forum yet (<a hre
 * Action: plugin release
 
 == Upgrade Notice ==
+
+= V1.0.2 =
+We updated all functionality for wordpress 4.2.2. BWS plugins section was updated.
 
 = V1.0.1 =
 We updated all functionality for wordpress 4.2.1.

@@ -4,7 +4,7 @@ Plugin Name: Re-attacher by BestWebSoft
 Plugin URI: http://bestwebsoft.com/products/
 Description: This plugin allows to attach, unattach or reattach media item in different post.
 Author: BestWebSoft
-Version: 1.0.1
+Version: 1.0.2
 Author URI: http://bestwebsoft.com/
 License: GPLv3 or later
 */
