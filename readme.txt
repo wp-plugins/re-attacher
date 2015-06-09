@@ -61,7 +61,7 @@ We can fix some things for free for the users who provide a translation of our p
 2. Activate the plugin using the 'Plugins' menu in your WordPress admin panel.
 3. You can adjust the necessary settings using your WordPress admin panel in "BWS Plugins" > "Re-attacher".
 
-<a href="https://docs.google.com/document/d/13moIQgJda_Fvj7fVhtQpF8whiOsBoQfaYlw4Ahn92RU/edit" target="_blank">View a Step-by-step Instruction on Re-attacher Installation</a>.
+<a href="https://docs.google.com/document/d/13moIQgJda_Fvj7fVhtQpF8whiOsBoQfaYlw4Ahn92RU/edit" target="_blank">View a Step-by-step Instruction on Re-attacher Installation</a>. 
 
 http://www.youtube.com/watch?v=kjMK6GZ69YY
 
