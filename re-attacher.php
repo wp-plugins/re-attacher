@@ -4,7 +4,7 @@ Plugin Name: Re-attacher by BestWebSoft
 Plugin URI: http://bestwebsoft.com/products/
 Description: This plugin allows to attach, unattach or reattach media item in different post.
 Author: BestWebSoft
-Version: 1.0.2
+Version: 1.0.3
 Author URI: http://bestwebsoft.com/
 License: GPLv3 or later
 */
@@ -49,7 +49,7 @@ if ( ! function_exists( 'rttchr_init' ) ) {
 		}
 
 		/* Function check if plugin is compatible with current WP version */
-		bws_wp_version_check( plugin_basename( __FILE__ ), $rttchr_plugin_info, "3.5" );
+		bws_wp_version_check( plugin_basename( __FILE__ ), $rttchr_plugin_info, '3.5' );
 	}
 }
 /**
@@ -318,7 +318,7 @@ if ( ! function_exists( 'rttchr_attach_box_scripts_action' ) ) {
 						array(
 							'uploaderTitle' 	=> __( 'Select the item that needs to be attached', 're_attacher' ),
 							'uploaderButton'	=> __( 'Attach item', 're_attacher' ),
-							'nonce' 			=> wp_create_nonce( 'set_post_attach_item_' . $post->post_type ),
+							'nonce' 			=> wp_create_nonce( 'set_post_attach_item_' . $post->post_type )
 						)
 					);
 				}

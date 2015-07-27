@@ -3,8 +3,8 @@ Contributors: bestwebsoft
 Donate link: http://bestwebsoft.com/donate/
 Tags: plugin, wordpress, unattach, reattach, attach, re-attach, unattachment, attached, bind, image, re-attacher, re-attacher plugin, attach image, attachment, reatach, reattacj, re-attech, attach multiple files, attach to gallery, attach to portfolio
 Requires at least: 3.5 
-Tested up to: 4.2.2
-Stable tag: 1.0.2
+Tested up to: 4.2.3
+Stable tag: 1.0.3
 License: GPLv3 or later
 License URI: http://www.gnu.org/licenses/gpl-3.0.html
 
@@ -61,7 +61,7 @@ We can fix some things for free for the users who provide a translation of our p
 2. Activate the plugin using the 'Plugins' menu in your WordPress admin panel.
 3. You can adjust the necessary settings using your WordPress admin panel in "BWS Plugins" > "Re-attacher".
 
-<a href="https://docs.google.com/document/d/13moIQgJda_Fvj7fVhtQpF8whiOsBoQfaYlw4Ahn92RU/edit" target="_blank">View a Step-by-step Instruction on Re-attacher Installation</a>. 
+<a href="https://docs.google.com/document/d/13moIQgJda_Fvj7fVhtQpF8whiOsBoQfaYlw4Ahn92RU/edit" target="_blank">View a Step-by-step Instruction on Re-attacher Installation</a>.
 
 http://www.youtube.com/watch?v=kjMK6GZ69YY
 
@@ -105,6 +105,9 @@ Please make sure that the problem hasn't been discussed on our forum yet (<a hre
 
 == Changelog ==
 
+= V1.0.3 - 27.07.2015 =
+* Update : We updated all functionality for wordpress 4.2.3.
+
 = V1.0.2 - 04.06.2015 =
 * Update : We updated all functionality for wordpress 4.2.2.
 * Update : BWS plugins section was updated.
@@ -116,6 +119,9 @@ Please make sure that the problem hasn't been discussed on our forum yet (<a hre
 * Action: plugin release
 
 == Upgrade Notice ==
+
+= V1.0.3 =
+We updated all functionality for wordpress 4.2.3.
 
 = V1.0.2 =
 We updated all functionality for wordpress 4.2.2. BWS plugins section was updated.
